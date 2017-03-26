@@ -1,0 +1,31 @@
+<style>
+    .beer {
+        position: absolute;
+        bottom: 0;
+        width: 200px;
+        background: #E69100;
+    }
+    .beer-container {
+        height: 200px;
+        width: 200px;
+        position: relative;
+    }
+        .beer-container img {
+            z-index: 1000;
+            position: absolute;
+        }
+</style>
+<div class="row">
+    <div class="col-md-2" *ngFor="let glass of glasses">
+        <div class="beer-container" (click)="drink()">
+            <img src="/images/glass.png" />
+            <div class="beer" [style.height]="glass.Number+'%'"></div>
+        </div>
+    </div>
+</div>
+
+<!--<beer [glasses]="glasses$ | async"></beer>-->
+
+<footer>
+    <a (click)="reset()">...</a>
+</footer>
