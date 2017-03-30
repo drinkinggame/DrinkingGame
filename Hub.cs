@@ -75,8 +75,6 @@ namespace DrinkingGame
             }
             return base.OnDisconnected(stopCalled);
         }
-
-
     }
 
     public class Glass
